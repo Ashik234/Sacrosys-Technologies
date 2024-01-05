@@ -20,7 +20,7 @@ function Login() {
     // Check if the user is already authenticated
     if (isAuthenticated()) {
       console.log("authenticated");
-      navigate("/dashboard");
+      navigate("/");
     }
   }, [navigate]);
 
@@ -43,7 +43,7 @@ function Login() {
           if (user.password === values.password) {
             localStorage.setItem("authToken", "dummy_token_" + Date.now());
             localStorage.setItem("authTokenExpiration", (Date.now() + 3 * 60 * 1000).toString());
-            navigate("/dashboard");
+            navigate("/");
           } else {
             setLoginError("Incorrect password");
           }

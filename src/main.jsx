@@ -8,8 +8,11 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 const queryClient = new QueryClient();
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
     <App />
+    <ToastContainer />
   </QueryClientProvider>
 );
