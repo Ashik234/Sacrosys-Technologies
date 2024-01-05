@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Arrow from "/arrow_drop_down.svg";
 import Calendar from "/calendar.svg";
-import LineChartGraph from "../components/Graphs/LineChartGraph";
 import PieCharGraph from "../components/Graphs/PieCharGraph";
 import TopProduct from "../components/Graphs/TopProduct";
 import LeastProduct from "../components/Graphs/LeastProduct";
 import BarChartGraph from "../components/Graphs/BarChartGraph";
-
+import { Line } from "react-chartjs-2";
+import LineChartGraph from "../components/Graphs/LineChart";
 function DashBoard() {
+  
   return (
     <>
       <div className="md:flex bg-black">
@@ -105,7 +106,7 @@ function DashBoard() {
                   <h1>3%</h1>
                 </div>
               </div>
-              <BarChartGraph/>
+              <BarChartGraph />
             </div>
             <div
               className="md:w-3/12 rounded-lg p-4 md:mr-2 md:mx-0 mx-4 md:mt-0 mt-2  text-white"
@@ -147,15 +148,16 @@ function DashBoard() {
             </div>
           </div>
         </div>
-        <div className="md:w-3/6">
+        <div className="md:w-3/6 overflow-x-auto">
           <div
             className="rounded-lg flex justify-center mx-4 text-white mt-2"
             style={{
               backgroundColor: "rgba(20, 20, 20, 1)",
               boxShadow: "0px 0px 10px 0px rgba(255, 255, 255, 0.25)",
+              width: "700px",
             }}
           >
-            <LineChartGraph />
+           <LineChartGraph/>
           </div>
         </div>
       </div>
