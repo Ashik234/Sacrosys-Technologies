@@ -9,9 +9,7 @@ import { LoginSchema } from "../validation/yup";
 import { useFormikValidation } from "../validation/formik";
 import { isAuthenticated } from "../utils/authentication";
 
-// Main Login component
 function Login() {
-  //  hooks and state variables
   const navigate = useNavigate();
   const [colorTheme, setTheme] = useDarkTheme();
   const [passwordVisible, setPasswordVisible] = useState(false);
